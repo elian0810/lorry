@@ -1,10 +1,10 @@
 import { AuditBaseEntity } from 'src/common/db/base.entity';
-import { COLUMN_ONE_TO_ONE } from 'src/common/db/constants/db-constant-configurations';
+import { COLUMN_BIG_INT, COLUMN_ONE_TO_ONE } from 'src/common/db/constants/db-constant-configurations';
 import { Column, Entity } from 'typeorm';
 
 @Entity({ name: 'categories' })
 export class Category extends AuditBaseEntity {
-  @Column(COLUMN_ONE_TO_ONE)
+  @Column(COLUMN_BIG_INT)
   id: number;
 
   @Column({ type: 'varchar', length: 255 })
